@@ -1,0 +1,15 @@
+[package]
+name = "data_oriented_example"
+version = "0.1.0"
+authors = ["James Roger McMurray <jamcmurr@amazon.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.7"
+criterion = "0.3"
+
+[[bench]]
+name = "my_benchmark"
+harness = false
