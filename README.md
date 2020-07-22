@@ -9,9 +9,13 @@ Done:
 SoA gets unrolled by compiler, results in ~50% speed up. 
 Godbolt: https://godbolt.org/z/d8bjMb
 
+* Benchmark of pattern matching inside hot loop vs. outside
+
+Outside results in 50% speed up.
+
+
 TODO:
 
-* Benchmark of pattern matching inside hot loop vs. outside
 
 * Benchmark of Linked List iteration vs. contiguous Vector
 
