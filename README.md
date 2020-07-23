@@ -13,10 +13,10 @@ Godbolt: https://godbolt.org/z/d8bjMb
 
 Outside results in 50% speed up.
 
+* Benchmark of Linked List iteration vs. contiguous Vector
+
+Vector shows consistent 90% speed up vs. Linked List iteration
 
 TODO:
-
-
-* Benchmark of Linked List iteration vs. contiguous Vector
 
 * Benchmark of dynamic dispatch vs. monomorphisation

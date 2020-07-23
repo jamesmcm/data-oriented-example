@@ -17,3 +17,7 @@ harness = false
 [[bench]]
 name = "bench_innercheck"
 harness = false
+
+[[bench]]
+name = "bench_linkedlist"
+harness = false
