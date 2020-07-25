@@ -10,17 +10,26 @@ pub struct Bar {
 
 pub trait MyTrait {
     fn test(&self) -> String;
+    fn square_id(&mut self);
 }
 
 impl MyTrait for Foo {
     fn test(&self) -> String {
         format!("Foo_{}", self.id)
     }
+
+    fn square_id(&mut self) {
+        self.id = self.id * self.id;
+    }
 }
 
 impl MyTrait for Bar {
     fn test(&self) -> String {
         format!("Bar_{}", self.id)
+    }
+
+    fn square_id(&mut self) {
+        self.id = self.id * self.id * self.id;
     }
 }
 
@@ -67,4 +76,16 @@ pub fn run_vecs_box<T: MyTrait>(x: &Vec<Box<T>>) -> Vec<String> {
 
 pub fn run_dyn(x: &Vec<Box<dyn MyTrait>>) -> Vec<String> {
     x.into_iter().map(|x| x.test()).collect()
+}
+
+pub fn run_vecs_square<T: MyTrait>(x: &mut Vec<T>) {
+    x.iter_mut().for_each(|x| x.square_id())
+}
+
+pub fn run_vecs_box_square<T: MyTrait>(x: &mut Vec<Box<T>>) {
+    x.iter_mut().for_each(|x| x.square_id())
+}
+
+pub fn run_dyn_square(x: &mut Vec<Box<dyn MyTrait>>) {
+    x.iter_mut().for_each(|x| x.square_id())
 }

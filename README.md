@@ -17,6 +17,7 @@ Outside results in 50% speed up.
 
 Vector shows consistent 90% speed up vs. Linked List iteration
 
-TODO:
-
 * Benchmark of dynamic dispatch vs. monomorphisation
+
+Dynamic dispatch impedes vectorisation due to indirection, otherwise
+cost of lookup in vtable is small
