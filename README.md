@@ -2,6 +2,8 @@
 
 Experimenting with [Data Oriented Design](https://en.wikipedia.org/wiki/Data-oriented_design) in Rust.
 
+Written for this blog post: http://jamesmcm.github.io/blog/2020/07/25/intro-dod/#en
+
 Done: 
 
 * Benchmark of [Array of Structs vs. Struct of Arrays](https://en.wikipedia.org/wiki/AoS_and_SoA)
